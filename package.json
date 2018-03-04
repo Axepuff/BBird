@@ -7,14 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "static ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Axepuff/Menu_component.git"
-  },
+  "repository": "git+https://github.com/Axepuff/Menu_component.git",
   "author": "axepuff@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Axepuff/Menu_component/issues"
   },
-  "homepage": "https://github.com/Axepuff/Menu_component#readme"
+  "homepage": "https://github.com/Axepuff/Menu_component#readme",
+  "dependencies": {
+    "jade": "^1.11.0"
+  }
 }
