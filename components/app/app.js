@@ -2,10 +2,23 @@
   let Menu = window.menu
   
   new Menu({
-    parent: document.querySelectorAll('.menu'),
+    parent: document.querySelector('.menu'),
     data: {
-      name: 'yandex'
+      items: [
+        {
+          name: 'yandex',
+          link: 'http://yandex.ru'
+        },
+        {
+          name: 'mail',
+          link: 'http://mail.ru'
+        },
+        {
+          name: 'google',
+          link: 'http://google.ru'
+        }
+      ]
     }
   })
-  
-})()
+
+})();
