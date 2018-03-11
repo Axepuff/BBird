@@ -1,0 +1,33 @@
+.js-form__btn {
+  position: relative;
+}
+
+.js-form__hint {
+  position: absolute;
+  top: 50%;
+  left: 115%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.js-form__hint::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #dc3545 transparent transparent;
+}
+
+.js-form__hint.active {
+  opacity: 0.6;
+}

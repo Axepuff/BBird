@@ -1,6 +1,11 @@
 .js-menu {
-  padding: 5px;
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+.js-menu__wrapper {
+  margin-bottom: 3rem;
 }
 
 .js-menu__item {

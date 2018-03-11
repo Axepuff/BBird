@@ -1,7 +1,8 @@
 (function () {
   let Menu = window.menu
+  let Form = window.form
   
-  new Menu({
+  const menu = new Menu({
     parent: document.querySelector('.menu'),
     data: {
       items: [
@@ -19,6 +20,15 @@
         }
       ]
     }
+  })
+
+  const form = new Form({
+    parent: document.querySelector('.form')
+  })
+
+  form.on('add', event => {
+    menu.addItem(event.detail);
+    form.showHint(event.detail);
   })
 
 })();

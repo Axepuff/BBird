@@ -16,7 +16,7 @@
   "homepage": "https://github.com/Axepuff/Menu_component#readme",
   "dependencies": {
     "node-static": "^0.7.10",
-    "pug": "^2.0.0-rc.4",
+    "pug": "^2.0.1",
     "pug-cli": "^1.0.0-alpha6"
   }
 }

@@ -2,7 +2,7 @@
   'use strict';
   // let pug = require('pug');
   // let tmp = pug.compileFile('menu_tmp.pug', options);
-  let tmp = window.menu_tmp
+  const tmp = window.menu_tmp;
 
   /**
    * @class Menu
@@ -25,6 +25,7 @@
     }
 
     render() {
+      this.parent.classList.add('js-menu__wrapper')
       this.parent.innerHTML = tmp(this.data);
       this.parent.style.maxWidth = this.widthString
     }
@@ -34,6 +35,13 @@
         return index !== i
       });
       this.render();
+    }
+
+    addItem(item) {
+      if (item.name.length > 0 && item.link.length > 0) {
+        this.data.items.push(item);
+        this.render();
+      }
     }
 
     _initWidth() {
@@ -49,12 +57,11 @@
 
       const item = event.target;
 
-      // try {
       if (item.dataset.action) {
         try {
           this['_on' + item.dataset.action](item);
         } catch (e) {
-          throw new Error(`Метод ${item.dataset.action} не определён`);
+          throw new Error(`Метод $3{item.dataset.action} не определён`);
         }
       }
 
