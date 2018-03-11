@@ -9,20 +9,24 @@
    */
   class Menu {
 
-    constructor({parent,data}) {
-
+    constructor({
+      parent,
+      data,
+      maxWidth
+    }) {
       this.parent = parent;
       this.data = data;
+      this.width = maxWidth
+      if (maxWidth) this._initWidth()
 
-      if (data) {
-        this.render();
-      }
+      if (data) this.render();
 
       this._initEvents()
     }
 
     render() {
       this.parent.innerHTML = tmp(this.data);
+      this.parent.style.maxWidth = this.widthString
     }
 
     removeItem(index) {
@@ -30,6 +34,10 @@
         return index !== i
       });
       this.render();
+    }
+
+    _initWidth() {
+      this.widthString = this.width.toString().match(/[a-z]/) ? this.width : this.width + 'px'
     }
 
     _initEvents() {
@@ -41,20 +49,26 @@
 
       const item = event.target;
 
-      try {
-        this['_on' + item.dataset.action](item);
-      } catch(e) {
-        throw new Error(`Метод ${item.dataset.action} не определён`);
+      // try {
+      if (item.dataset.action) {
+        try {
+          this['_on' + item.dataset.action](item);
+        } catch (e) {
+          throw new Error(`Метод ${item.dataset.action} не определён`);
+        }
       }
+
     }
 
     _onremove(item) {
-      let index = parseInt(item.parentNode.dataset.id, 10);
+      let index = parseInt(item.parentNode.parentNode.dataset.id, 10);
 
       this.removeItem(index)
     }
 
-    
+    _onpick(item) {
+      console.log('pick' + item)
+    }
 
   }
 
