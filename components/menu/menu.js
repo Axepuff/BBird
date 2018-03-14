@@ -41,6 +41,7 @@
       this.data.items = this.data.items.filter((item, i) => {
         return index !== i
       });
+      this.trigger('remove', this.data)
       this.render();
     }
 
@@ -49,6 +50,18 @@
         this.data.items.push(item);
         this.render();
       }
+    }
+
+    on(name, cb) {
+      this.parent.addEventListener(name, cb);
+    }
+
+    trigger(name, data) {
+      const widgetEvent = new CustomEvent(name, {
+        bubbles: true,
+        detail: data
+      })
+      this.parent.dispatchEvent(widgetEvent)
     }
 
     _initWidth() {

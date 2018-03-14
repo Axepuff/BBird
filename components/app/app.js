@@ -3,7 +3,7 @@
   let Form = window.form;
   let Model = window.model;
   
-  const model = new Model('/data/menu.json')
+  const model = new Model('https://menuapp-82b72.firebaseio.com/menu_data.json')
 
   const menu = new Menu({
     parent: document.querySelector('.menu')
@@ -16,13 +16,17 @@
   
   model.fetch();
 
+  menu.on('remove', event => {
+    model.save(event.detail);
+  })
+
   const form = new Form({
     parent: document.querySelector('.form')
   })
 
   form.on('add', event => {
     menu.addItem(event.detail);
-    model.save(menu.getData())
+    model.save(menu.getData());
     form.showHint(event.detail);
   })
 
