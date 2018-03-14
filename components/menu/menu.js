@@ -30,8 +30,11 @@
     }
 
     setData(data) {
-      console.log(data)
       this.data = data;
+    }
+
+    getData() {
+      return this.data
     }
 
     removeItem(index) {

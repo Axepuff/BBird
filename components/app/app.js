@@ -10,7 +10,6 @@
   })
 
   model.on('update', () => {
-    console.log('update')
     menu.setData(model.getData())
     menu.render();
   })
@@ -23,6 +22,7 @@
 
   form.on('add', event => {
     menu.addItem(event.detail);
+    model.save(menu.getData())
     form.showHint(event.detail);
   })
 

@@ -2,7 +2,7 @@
 
   class Model {
     constructor(resource) {
-      this.resource = resource;
+      this._resource = resource;
       this.data = {};
       this._eventHandlers = {};
 
@@ -23,6 +23,11 @@
       }
     }
 
+    save (data) {
+      this.setData(data);
+      this._makeRequest('PUT', this._resource, null);
+    }
+
     on(name, cb) {
       if (!this._eventHandlers[name]) {
         this._eventHandlers[name] = [];
@@ -31,7 +36,7 @@
     }
 
     fetch() {
-      this._makeRequest('GET', this.resource, this.setData.bind(this))
+      this._makeRequest('GET', this._resource, this.setData.bind(this))
     }
     
     _makeRequest(method, resource, cb) {
@@ -41,11 +46,16 @@
         if (xhr.readyState !== 4) {
           return;
         }
-        if (xhr.status === 200) {
+        if (xhr.status === 200 && cb !== null) {
           cb(JSON.parse(xhr.responseText));
         }
       }
-      xhr.send();
+
+      if (method === 'PUT') {
+        xhr.send(JSON.stringify(this.getData()));
+      } else {
+        xhr.send();
+      }
 
     }
   }
