@@ -15,7 +15,6 @@
       maxWidth
     }) {
       this.parent = parent;
-      this.data = data;
       this.width = maxWidth
       if (maxWidth) this._initWidth()
 
@@ -28,6 +27,11 @@
       this.parent.classList.add('js-menu__wrapper')
       this.parent.innerHTML = tmp(this.data);
       this.parent.style.maxWidth = this.widthString
+    }
+
+    setData(data) {
+      console.log(data)
+      this.data = data;
     }
 
     removeItem(index) {

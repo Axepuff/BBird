@@ -13,7 +13,6 @@
       data
     }) {
       this.parent = parent;
-      this.onSubmit = onSubmit;
       this.data = data;
 
       this.render();

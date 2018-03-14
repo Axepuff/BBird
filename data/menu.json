@@ -1,0 +1,16 @@
+{
+  "title": "JSON title",
+  "items": [{
+      "name": "yandex",
+      "link": "http://yandex.ru"
+    },
+    {
+      "name": "mail",
+      "link": "http://mail.ru"
+    },
+    {
+      "name": "google",
+      "link": "http://google.ru"
+    }
+  ]
+}
