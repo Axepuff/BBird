@@ -1,8 +1,8 @@
-(function () {
-  'use strict';
+import {menu_tmp} from './menu_tmp'
+
   // let pug = require('pug');
   // let tmp = pug.compileFile('menu_tmp.pug', options);
-  const tmp = window.menu_tmp;
+  const tmp = menu_tmp;
 
   /**
    * @class Menu
@@ -99,5 +99,4 @@
 
   }
 
-  window.menu = Menu
-})();
+export {Menu};
