@@ -1,4 +1,4 @@
-import {menu_tmp} from './menu_tmp'
+import menu_tmp from './menu_tmp.pug'
 
   // let pug = require('pug');
   // let tmp = pug.compileFile('menu_tmp.pug', options);
