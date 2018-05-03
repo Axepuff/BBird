@@ -1,6 +1,7 @@
 import {Model} from '../model/model';
 import {Form} from '../form/form';
 import {Menu} from '../menu/menu';
+// import '.app.css';
 
 const model = new Model('https://menuapp-82b72.firebaseio.com/menu_data.json')
 
