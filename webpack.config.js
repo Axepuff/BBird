@@ -1,16 +1,15 @@
 const path = require('path');
 
-module.exports = {
-  entry: './src/app/app',
+let conf = {
+  entry: ['babel-polyfill', './src/app/app'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: 'di st/'
+    publicPath: 'dist/'
   },
   devServer: {
     overlay: true
   },
-	devtool: 'eval-sourcemap',
   module: {
     rules: [
         {
@@ -39,3 +38,8 @@ module.exports = {
   }
 };
 
+module.exports = (env, options) => {
+  let production = options.mode;
+  conf.devtool = production === 'production' ? 'source-map' : 'eval-sourcemap';
+  return conf;
+}
