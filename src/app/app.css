@@ -1,3 +1,7 @@
+@import '../form/form.css';
+@import '../menu/menu.css';
+
+
 .a {
   color: red;
 }

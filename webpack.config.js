@@ -1,4 +1,5 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let conf = {
   entry: ['babel-polyfill', './src/app/app'],
@@ -10,6 +11,9 @@ let conf = {
   devServer: {
     overlay: true
   },
+  plugins: [
+    new ExtractTextPlugin('style.css')
+  ],
   module: {
     rules: [
         {
@@ -26,13 +30,13 @@ let conf = {
         },
         {
           test: /\.css$/,
-          use: [
-            'style-loader',
-            {
-              loader: 'css-loader', options: { importLoaders: 1 }
-            },
-            'postcss-loader'
-          ]
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+              { loader: 'css-loader', options: { importLoaders: 1 } },
+              'postcss-loader'
+            ]
+          })
         }
     ]
   }
