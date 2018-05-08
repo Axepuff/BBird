@@ -4,7 +4,6 @@ module.exports = {
       browsers: ['last 2 versions', '> 5%']
     },
     'cssnano': {},
-    'autoprefixer': {},
     'lost': {},
     'rucksack-css': {}
   }

@@ -1,7 +1,13 @@
 @import '../form/form.css';
 @import '../menu/menu.css';
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 300px;
+}
 
-.a {
-  color: red;
+.header {
+  grid-column: 1/-1;
+  clear: both;
 }

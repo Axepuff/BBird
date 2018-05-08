@@ -1,4 +1,4 @@
-import {form_tmp} from './form_tmp'
+import form_tmp from './form_tmp.pug'
 
 const tmp = form_tmp;
 

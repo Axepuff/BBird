@@ -16,7 +16,6 @@
   "homepage": "https://github.com/Axepuff/Menu_component#readme",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
