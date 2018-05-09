@@ -1,0 +1,16 @@
+
+
+.header {
+  height: 4rem;
+  background: linear-gradient(166.09deg, #D52828 -25.54%, #74C64E 165.52%);
+  background-blend-mode: hard-light;
+  box-shadow: 0px 50px 0px #000000;
+
+}
+
+.header__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}

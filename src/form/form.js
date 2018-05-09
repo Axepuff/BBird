@@ -19,7 +19,7 @@ class Form {
   }
 
   render () {
-    this.parent.innerHTML = tmp()
+    this.parent.insertAdjacentHTML('beforeend', tmp());
   }
 
   getField(name) {

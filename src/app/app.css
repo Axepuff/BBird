@@ -1,5 +1,18 @@
 @import '../form/form.css';
 @import '../menu/menu.css';
+@import '../header/header.css';
+
+:root {
+  --fontSize: 1rem;
+}
+
+:any-link {
+  background-color: yellow;
+}
+
+.body {
+  font-size: 16px;
+}
 
 .container {
   display: grid;

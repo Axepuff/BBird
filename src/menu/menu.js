@@ -25,7 +25,7 @@ import menu_tmp from './menu_tmp.pug'
 
     render() {
       this.parent.classList.add('js-menu__wrapper')
-      this.parent.innerHTML = tmp(this.data);
+      this.parent.insertAdjacentHTML('beforeend', tmp(this.data));
       this.parent.style.maxWidth = this.widthString
     }
 
