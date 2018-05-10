@@ -1,8 +1,8 @@
-.js-form__btn {
+.form__btn {
   position: relative;
 }
 
-.js-form__hint {
+.form__hint {
   position: absolute;
   top: 50%;
   left: 115%;
@@ -15,7 +15,7 @@
   font-weight: 300;
 }
 
-.js-form__hint::after {
+.form__hint::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -28,6 +28,6 @@
   border-color: transparent #dc3545 transparent transparent;
 }
 
-.js-form__hint.active {
+.form__hint.active {
   opacity: 0.6;
 }

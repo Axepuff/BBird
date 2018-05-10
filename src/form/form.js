@@ -28,7 +28,7 @@ class Form {
 
   async showHint(item) {
     if (item.name.length === 0 || item.link.length === 0) {
-      this.parent.querySelector('.js-form__hint').classList.add('active');
+      this.parent.querySelector('.form__hint').classList.add('active');
 
       let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -42,7 +42,7 @@ class Form {
   }
 
   hideHint() {
-    this.parent.querySelector('.js-form__hint').classList.remove('active')
+    this.parent.querySelector('.form__hint').classList.remove('active')
   }
 
   on(name, cb) {
