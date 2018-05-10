@@ -4,5 +4,5 @@
 npm i
 ```
 
-Собирается webpack 4, используется шаблонизатор PUG, подключен post css
+Собирается webpack 4, используется шаблонизатор PUG, подключен post css<br>
 Общение с baas (firebase) по REST API
