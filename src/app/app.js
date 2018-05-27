@@ -1,13 +1,18 @@
 import './app.css';
+import {Container} from '../container/container';
 import {Header} from '../header/header';
 import {Model} from '../model/model';
 import {Form} from '../form/form';
 import {Menu} from '../menu/menu';
 // import styles from 'app.css';
 
+const container = new Container({
+  parent: document.querySelector('.root')
+})
+
 const header = new Header({
   parent: document.querySelector('.container'),
-  content: 'BlockChain Bird'
+  content: 'Blockchain Bird'
 })
 
 const model = new Model('https://menuapp-82b72.firebaseio.com/menu_data.json')

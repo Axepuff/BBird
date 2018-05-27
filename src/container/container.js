@@ -1,28 +1,27 @@
 import container_tmp from './container_tmp.pug'
+import './container.css';
 
-  // let pug = require('pug');
-  // let tmp = pug.compileFile('menu_tmp.pug', options);
-  const tmp = container_tmp;
+const tmp = container_tmp;
 
-  /**
-   * @class container
-   */
-  class container {
+/**
+ * @class container
+ */
+class Container {
 
-    constructor({
-      parent,
-      content
-    }) {
-      this.parent = parent;
-      this.content = content
+  constructor({
+    parent,
+    content
+  }) {
+    this.parent = parent;
+    this.content = content;
 
-      this.render()
-    }
-
-    render () {
-      this.parent.innerHTML = tmp({content: this.content});
-    }
-
+    this.render()
   }
 
-export {container};
+  render () {
+    this.parent.innerHTML = tmp();
+  }
+
+}
+
+export {Container};

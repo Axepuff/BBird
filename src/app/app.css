@@ -13,14 +13,3 @@
 .body {
   font-size: 16px;
 }
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 300px;
-}
-
-.header {
-  grid-column: 1/-1;
-  clear: both;
-}
