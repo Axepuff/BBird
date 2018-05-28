@@ -23,6 +23,9 @@
   .container {
     margin: 0;
   }
+  .form {
+    padding: 1.5rem 0;
+  }
 }
 
 @media (--small) {
@@ -34,6 +37,9 @@
   .container {
     margin: 0 1rem;
   }
+  .form {
+    padding: 1.5rem 0;
+  }
 }
 
 @media (--medium) {
@@ -44,6 +50,9 @@
   }
   .container {
     margin: 0 2rem;
+  }
+  .form {
+    padding: 1.5rem 0;
   }
 }
 

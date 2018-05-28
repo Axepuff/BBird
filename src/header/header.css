@@ -10,7 +10,7 @@
 }
 
 .header__title {
-  font-size: 2rem;
+  font-size: responsive 1rem 2rem;
   font-weight: bold;
   margin: 0;
   padding: 0;
