@@ -11,14 +11,14 @@ const container = new Container({
 })
 
 const header = new Header({
-  parent: document.querySelector('.container'),
+  parent: container.view.querySelector('.header'),
   content: 'Blockchain Bird'
 })
 
 const model = new Model('https://menuapp-82b72.firebaseio.com/menu_data.json')
 
 const menu = new Menu({
-  parent: document.querySelector('.container')
+  parent: document.querySelector('.menu-wrapper')
 })
 
 model.on('update', () => {
@@ -33,7 +33,7 @@ menu.on('remove', event => {
 })
 
 const form = new Form({
-  parent: document.querySelector('.container')
+  parent: document.querySelector('.form-wrapper')
 })
 
 form.on('add', event => {

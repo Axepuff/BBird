@@ -5,6 +5,7 @@ module.exports = {
     },
     'cssnano': {},
     'lost': {},
-    'rucksack-css': {}
+    'rucksack-css': {},
+    'postcss-nested': {}
   }
 }

@@ -6,10 +6,6 @@
   --fontSize: 1rem;
 }
 
-:any-link {
-  background-color: yellow;
-}
-
 .body {
   font-size: 16px;
 }

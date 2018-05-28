@@ -20,7 +20,10 @@ import header_tmp from './header_tmp.pug'
     }
 
     render () {
-      this.parent.insertAdjacentHTML('afterbegin', tmp({content: this.content}));
+      if (!this.parent.classList.contains('header')) {
+        this.parent.classList.add('header')
+      }
+      this.parent.innerHTML =  tmp({content: this.content});
     }
 
   }

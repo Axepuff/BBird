@@ -15,11 +15,17 @@ class Container {
     this.parent = parent;
     this.content = content;
 
+    this.instance = null;
     this.render()
   }
 
   render () {
     this.parent.innerHTML = tmp();
+    this.instance = this.parent.querySelector('.container');
+  }
+
+  get view () {
+    return this.instance;
   }
 
 }
