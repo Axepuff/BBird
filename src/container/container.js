@@ -1,5 +1,4 @@
 import container_tmp from './container_tmp.pug'
-import './container.css';
 
 const tmp = container_tmp;
 

@@ -87,8 +87,7 @@ import menu_tmp from './menu_tmp.pug'
     }
 
     _onremove(item) {
-      let index = parseInt(item.parentNode.parentNode.dataset.id, 10);
-
+      let index = parseInt(item.parentNode.dataset.id, 10);
       this.removeItem(index)
     }
 

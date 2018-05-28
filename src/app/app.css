@@ -1,11 +1,21 @@
 @import '../form/form.css';
 @import '../menu/menu.css';
 @import '../header/header.css';
+@import '../container/container.css';
 
 :root {
   --fontSize: 1rem;
 }
 
-.body {
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P&subset=cyrillic,cyrillic-ext,greek,latin-ext');
+
+body {
+  margin: 0;
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.root {
+  background: #b29d56;
+  height: 100vh;
 }

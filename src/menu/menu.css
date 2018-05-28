@@ -1,5 +1,6 @@
 .menu {
   padding: 1.5rem 1rem;
+  height: 100%;
   margin: 0;
   list-style: none;
   background: linear-gradient(93.24deg, #C65757 -28.44%, #74C64E 98.2%);
@@ -10,7 +11,7 @@
     overflow: hidden;
     background: #D4D731;
     background-blend-mode: soft-light;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
   &__close {
     position: relative;

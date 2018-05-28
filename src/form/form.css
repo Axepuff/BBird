@@ -1,5 +1,37 @@
-.form__btn {
-  position: relative;
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem 1rem;
+  background: #B29D56;
+  box-sizing: border-box;
+  &__group{
+    margin-bottom: 1rem;
+  }
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    padding: .75rem 0 .75rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    border: 0;
+  }
+  &__btn {
+    box-sizing: border-box;
+    padding: 0.25rem 1rem;
+    font-size: 1rem;
+    background: rebeccapurple; 
+    line-height: 2rem;
+    border: 0;
+    color: white;
+    max-width: 10rem;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    &:hover {
+      background: rgba(rebeccapurple, 0.8);
+    }
+  }
 }
 
 .form__hint {
