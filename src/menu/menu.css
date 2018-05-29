@@ -1,6 +1,6 @@
 .menu {
   padding: 1.5rem 1rem;
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   list-style: none;
   background: linear-gradient(93.24deg, #C65757 -28.44%, #74C64E 98.2%);
@@ -49,7 +49,7 @@
     display: inline-block;
     box-sizing: border-box;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2.25rem;
     padding: .75rem 0 .75rem 1rem;
     flex-grow: 2;

@@ -1,10 +1,10 @@
-import './app.css';
-import {Container} from '../container/container';
-import {Header} from '../header/header';
-import {Model} from '../model/model';
-import {Form} from '../form/form';
-import {Menu} from '../menu/menu';
-// import styles from 'app.css';
+import './app.css'
+import {Container} from '../container/container'
+import {Header} from '../header/header'
+import {Model} from '../model/model'
+import {Form} from '../form/form'
+import {Menu} from '../menu/menu'
+// import styles from 'app.css'
 
 const container = new Container({
   parent: document.querySelector('.root')
@@ -23,13 +23,13 @@ const menu = new Menu({
 
 model.on('update', () => {
   menu.setData(model.getData())
-  menu.render();
+  menu.render()
 })
 
-model.fetch();
+model.fetch()
 
 menu.on('remove', event => {
-  model.save(event.detail);
+  model.save(event.detail)
 })
 
 const form = new Form({
@@ -37,8 +37,8 @@ const form = new Form({
 })
 
 form.on('add', event => {
-  menu.addItem(event.detail);
-  model.save(menu.getData());
-  form.showHint(event.detail);
+  menu.addItem(event.detail)
+  model.save(menu.getData())
+  form.showHint(event.detail)
 })
 

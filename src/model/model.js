@@ -1,18 +1,21 @@
 class Model {
   constructor(resource) {
-    this._resource = resource;
-    this.data = {};
-    this._eventHandlers = {};
+    this._resource = resource
+    this.data = {}
+    this._eventHandlers = {}
 
   }
 
   getData() {
-    return this.data;
+    return this.data
   }
 
   setData(data) {
-    this.data = data;
-    this.trigger('update');
+    this.data = data
+    if (!this.data.items) {
+      this.data.items = []
+    }
+    this.trigger('update')
   }
 
   trigger(name) {
@@ -22,15 +25,15 @@ class Model {
   }
 
   save (data) {
-    this.setData(data);
-    this._makeRequest('PUT', this._resource, null);
+    this.setData(data)
+    this._makeRequest('PUT', this._resource, null)
   }
 
   on(name, cb) {
     if (!this._eventHandlers[name]) {
-      this._eventHandlers[name] = [];
+      this._eventHandlers[name] = []
     }
-    this._eventHandlers[name].push(cb);
+    this._eventHandlers[name].push(cb)
   }
 
   fetch() {
@@ -38,24 +41,24 @@ class Model {
   }
     
   _makeRequest(method, resource, cb) {
-    const xhr = new XMLHttpRequest();
-    xhr.open(method, resource, true);
+    const xhr = new XMLHttpRequest()
+    xhr.open(method, resource, true)
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== 4) {
-        return;
+        return
       }
       if (xhr.status === 200 && cb !== null) {
-        cb(JSON.parse(xhr.responseText));
+        cb(JSON.parse(xhr.responseText))
       }
     }
 
     if (method === 'PUT') {
-      xhr.send(JSON.stringify(this.getData()));
+      xhr.send(JSON.stringify(this.getData()))
     } else {
-      xhr.send();
+      xhr.send()
     }
 
   }
 }
 
-export {Model};
+export {Model}

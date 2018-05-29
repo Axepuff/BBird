@@ -1,8 +1,8 @@
 import header_tmp from './header_tmp.pug'
 
-  // let pug = require('pug');
-  // let tmp = pug.compileFile('menu_tmp.pug', options);
-  const tmp = header_tmp;
+  // let pug = require('pug')
+  // let tmp = pug.compileFile('menu_tmp.pug', options)
+  const tmp = header_tmp
 
   /**
    * @class Header
@@ -13,7 +13,7 @@ import header_tmp from './header_tmp.pug'
       parent,
       content
     }) {
-      this.parent = parent;
+      this.parent = parent
       this.content = content
 
       this.render()
@@ -23,9 +23,9 @@ import header_tmp from './header_tmp.pug'
       if (!this.parent.classList.contains('header')) {
         this.parent.classList.add('header')
       }
-      this.parent.innerHTML =  tmp({content: this.content});
+      this.parent.innerHTML =  tmp({content: this.content})
     }
 
   }
 
-export {Header};
+export {Header}

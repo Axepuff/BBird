@@ -10,9 +10,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P&subset=cyrillic,cyrillic-ext,greek,latin-ext');
 
 body {
+  overflow-x: hidden;
   margin: 0;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .root {

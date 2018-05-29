@@ -1,6 +1,6 @@
 import container_tmp from './container_tmp.pug'
 
-const tmp = container_tmp;
+const tmp = container_tmp
 
 /**
  * @class container
@@ -11,22 +11,22 @@ class Container {
     parent,
     content
   }) {
-    this.parent = parent;
-    this.content = content;
+    this.parent = parent
+    this.content = content
 
-    this.instance = null;
+    this.instance = null
     this.render()
   }
 
   render () {
-    this.parent.innerHTML = tmp();
-    this.instance = this.parent.querySelector('.container');
+    this.parent.innerHTML = tmp()
+    this.instance = this.parent.querySelector('.container')
   }
 
   get view () {
-    return this.instance;
+    return this.instance
   }
 
 }
 
-export {Container};
+export {Container}

@@ -1,8 +1,6 @@
 import menu_tmp from './menu_tmp.pug'
 
-  // let pug = require('pug');
-  // let tmp = pug.compileFile('menu_tmp.pug', options);
-  const tmp = menu_tmp;
+  const tmp = menu_tmp
 
   /**
    * @class Menu
@@ -14,22 +12,23 @@ import menu_tmp from './menu_tmp.pug'
       data,
       maxWidth
     }) {
-      this.parent = parent;
+      this.parent = parent
       this.width = maxWidth
       if (maxWidth) this._initWidth()
 
-      if (data) this.render();
-
+      this.render()
       this._initEvents()
     }
 
     render() {
-      this.parent.innerHTML =  tmp(this.data);
-      this.parent.style.maxWidth = this.widthString
+      if (this.data && this.data.items) {
+        this.parent.innerHTML =  this.data.items.length === 0 ? '' : tmp(this.data)
+        this.parent.style.maxWidth = this.widthString
+      }
     }
 
     setData(data) {
-      this.data = data;
+      this.data = data
     }
 
     getData() {
@@ -39,20 +38,20 @@ import menu_tmp from './menu_tmp.pug'
     removeItem(index) {
       this.data.items = this.data.items.filter((item, i) => {
         return index !== i
-      });
+      })
       this.trigger('remove', this.data)
-      this.render();
+      this.render()
     }
 
     addItem(item) {
       if (item.name.length > 0 && item.link.length > 0) {
-        this.data.items.push(item);
-        this.render();
+        this.data.items.push(item)
+        this.render()
       }
     }
 
     on(name, cb) {
-      this.parent.addEventListener(name, cb);
+      this.parent.addEventListener(name, cb)
     }
 
     trigger(name, data) {
@@ -68,19 +67,19 @@ import menu_tmp from './menu_tmp.pug'
     }
 
     _initEvents() {
-      this.parent.addEventListener('click', this._onClick.bind(this));
+      this.parent.addEventListener('click', this._onClick.bind(this))
     }
 
     _onClick(event) {
-      event.preventDefault();
+      event.preventDefault()
 
-      const item = event.target;
+      const item = event.target
 
       if (item.dataset.action) {
         try {
-          this['_on' + item.dataset.action](item);
+          this['_on' + item.dataset.action](item)
         } catch (e) {
-          throw new Error(`Метод $3{item.dataset.action} не определён`);
+          throw new Error(`Метод $3{item.dataset.action} не определён`)
         }
       }
 
@@ -89,7 +88,7 @@ import menu_tmp from './menu_tmp.pug'
     _onremove(item) {
       console.log(item.parentNode)
       console.log(item.parentNode.dataset)
-      let index = parseInt(item.parentNode.dataset.id, 10);
+      let index = parseInt(item.parentNode.dataset.id, 10)
       this.removeItem(index)
     }
 
@@ -99,4 +98,4 @@ import menu_tmp from './menu_tmp.pug'
 
   }
 
-export {Menu};
+export {Menu}
