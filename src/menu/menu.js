@@ -86,14 +86,17 @@ import menu_tmp from './menu_tmp.pug'
     }
 
     _onremove(item) {
-      console.log(item.parentNode)
-      console.log(item.parentNode.dataset)
       let index = parseInt(item.parentNode.dataset.id, 10)
       this.removeItem(index)
     }
 
     _onpick(item) {
-      console.log('pick' + item)
+      item.parentNode.classList.toggle('menu__item_select')
+      item.classList.toggle('menu__pick_select')
+    }
+
+    _onopen(item) {
+      window.open(item)
     }
 
   }

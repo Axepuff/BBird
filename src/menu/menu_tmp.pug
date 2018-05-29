@@ -1,5 +1,6 @@
 ul.menu
   each item, index in items
     li.menu__item(data-id=index)
-      a(class = "menu__link" href = item.link data-action="pick")= item.name
-      button(class = "menu__close close" type = "button" aria-label="Close" data-action='remove')
+      a(class = "menu__link" href = item.link data-action="open")= item.name
+      button(class = "menu__pick" href = item.link data-action="pick") ✔
+      button(class = "menu__close" type = "button" aria-label="Close" data-action='remove')

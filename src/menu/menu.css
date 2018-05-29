@@ -12,6 +12,9 @@
     background: #D4D731;
     background-blend-mode: soft-light;
     margin-bottom: 1rem;
+    &_select {
+      background: #d56e00;
+    }
   }
   &__close {
     position: relative;
@@ -55,6 +58,25 @@
     flex-grow: 2;
     &:hover {
       box-shadow: inset 0px 4px 50px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__pick {
+    display: inline-block;
+    width: 3.75rem;
+    background: #b29d56;
+    background-blend-mode: soft-light;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    border: 0;
+    cursor: pointer;
+    color: #b29d56;
+    font-family: 'Press Start 2P', cursive;
+    outline: none;
+    &:hover {
+      color: rgba(#000, 0.5);
+    }
+    &_select {
+      color: #000;
     }
   }
 }
