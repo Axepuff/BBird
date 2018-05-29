@@ -1,8 +1,10 @@
-# Компонент "Меню с формой"
+# Простое SPA, список ссылок
 Установка 
 ```bash
 npm i
 ```
 
 Собирается webpack 4, используется шаблонизатор PUG, подключен post css<br>
-Общение с baas (firebase) по REST API
+Общение с baas (firebase) по REST API.<br>
+Это потрясающиее воображение приложение сверстано с использованием grid.<br>
+https://blockchainbird.now.sh/
